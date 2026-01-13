@@ -1,0 +1,28 @@
+# config/vcs.yaml
+
+# This token is used to authorize administrative API calls, like creating profiles.
+# KEEP THIS SECRET in a real deployment.
+api-token: "vcs-api-token-secret"
+
+# Profile settings: Define how VCs are issued.
+profile:
+  # Set the DID method to 'key'. This avoids the need for a DID ledger like Orb.
+  did-method: "key"
+  # Use JSON-LD proofs with Ed25519 signature suite.
+  signature-type: "Ed25519Signature2018"
+  # The KMS (Key Management Service) type to use.
+  kms-type: "local"
+
+# KMS Configuration: How cryptographic keys are stored and managed.
+kms:
+  # Local KMS settings (used because kms-type is "local").
+  local:
+    # Use MongoDB to store the keys.
+    key-store-type: "mongodb"
+
+# OIDC Provider settings.
+oidc:
+  # This is the client ID VCS uses to interact with Hydra's admin API.
+  # We will create this client in Hydra on startup.
+  client-id: "vcs-hydra-client"
+  client-secret: "vcs-hydra-secret"

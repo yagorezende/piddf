@@ -50,6 +50,7 @@ Antes de iniciar, certifique-se de ter instalado:
 
 - [Docker](https://docs.docker.com/get-docker/) (versão 20.10 ou superior)
 - [Docker Compose](https://docs.docker.com/compose/install/) (versão 2.0 ou superior)
+- [Go](https://golang.org/dl/) (versão 1.23.11 ou superior)
 - Git
 
 ## Instalação
@@ -59,6 +60,8 @@ Antes de iniciar, certifique-se de ter instalado:
 ```bash
 git clone https://github.com/yagorezende/piddf.git
 cd piddf
+# download das dependências do PIDDF-VCS
+bash setup.sh
 ```
 
 2. Configure as variáveis de ambiente (se necessário):
@@ -67,6 +70,9 @@ cd piddf
 cp .env.example .env
 # Edite o arquivo .env com suas configurações
 ```
+
+> Atenção: O arquivo `.env` contém variáveis sensíveis, como senhas e chaves. 
+> Mantenha-o seguro e não o compartilhe publicamente.
 
 3. Inicie os serviços com Docker Compose:
 

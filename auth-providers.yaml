@@ -1,0 +1,17 @@
+#
+# Copyright SecureKey Technologies Inc. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+providers:
+  keycloak:
+    url: http://keycloak/auth/realms/labgen
+    clientID: piddf
+    clientSecret: SOME_SECRET_VALUE
+    name: Keycloak OIDC
+    signUpIconURL:
+      en: https://localhost:8070/static/images/sign-up-icon-en.svg
+    signInIconURL:
+      en: https://localhost:8070/static/images/sign-in-icon-en.svg
+    order: 1
